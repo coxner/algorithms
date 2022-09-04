@@ -1,0 +1,22 @@
+Traversing A Binary Search Tree
+There are two main ways of traversing a binary tree: breadth-first and depth-first. With breadth-first traversal, we begin traversing at the top of the tree’s root node, displaying its value and continuing the process with the left child node and the right child node. Descend a level and repeat this step until we finish displaying all the child nodes at the deepest level from left to right.
+
+With depth-first traversal, we always traverse down each left-side branch of a tree fully before proceeding down the right branch. However, there are three traversal options:
+
+Preorder is when we perform an action on the current node first, followed by its left child node and its right child node
+Inorder is when we perform an action on the left child node first, followed by the current node and the right child node
+Postorder is when we perform an action on the left child node first, followed by the right child node and then the current node
+
+
+Review
+In this lesson, you have successfully built a Binary Search Tree (BST) data structure in Python. You have implemented:
+
+a BinarySearchTree class containing value, depth, and left and right child nodes.
+an .insert() method to place a node of a specified value at the correct location in the Binary Search Tree. The time efficiency of this operation is O(logN) for a balanced tree - if there are N nodes in the BST, the max depth of a balanced tree is log(N). So, this method makes at most log(N) value comparisons. In the worst case of an imbalanced tree (all values on one side), the performance would be O(N).
+a .get_node_by_value() method to retrieve a node in the tree by its value. The time efficiency of this operation is also O(logN) for a balanced tree - if there are N nodes in the BST, the max depth of the tree is log(N), so this method makes at most log(N) value comparisons. In the worst case of an imbalanced tree (all values on one side), the performance would be O(N).
+a .depth_first_traversal() method to print the inorder traversal of the Binary Search Tree. This visits every single node, so if there are N nodes, the time efficiency for traversal is O(N).
+Great job! The Binary Search Tree is a dynamic data structure that provides efficient insertion and searching of data. It has the benefit of being easily expandable while maintaining a sorted order of the data. In more complex implementations, we could include:
+
+a .delete() method
+a self-balancing feature as data is inserted that maintains that two sides of the tree are even, guaranteeing a max depth of log(N)
+Try these out for yourself if you are up for the challenge!
