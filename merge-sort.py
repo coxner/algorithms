@@ -1,22 +1,25 @@
-#recursivly breaks down input list until it only has one element it then joins that single element with another element to create
+#recursivly (call stack) breaks down input list until it only has one element it then joins that single element with another element to create
 # a two element list it then joins that element with another 2 elements to create a 4 element list and so on.
 def merge_sort(items):
+  # our recursive case  
   if len(items) <= 1:
     return items
-
+  #finding the middle index and splitting our array
   middle_index = len(items) // 2
   left_split = items[:middle_index]
   right_split = items[middle_index:]
-
+  # recursivly calling merge_sort on are split arrays
   left_sorted = merge_sort(left_split)
   right_sorted = merge_sort(right_split)
-
+  #merge the arrays and return them 
   return merge(left_sorted, right_sorted)
 
+# orders broken down list
 def merge(left, right):
   result = []
-
+  #while left and right have elements
   while (left and right):
+    #comparison the determine which element we want to add to our array add left[0] if it is smaller or add right[0] if it is smaller
     if left[0] < right[0]:
       result.append(left[0])
       left.pop(0)
