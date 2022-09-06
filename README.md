@@ -6,6 +6,7 @@
   - [Merge Sort](#merge-sort)
   - [Quicksort](#quicksort)
 - [Trees](#trees)
+- [Heaps](#heaps)
 - [Files](#Files)
 
 
