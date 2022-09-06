@@ -145,4 +145,48 @@ Here is how the algorithm works.
 
 Heapsort code can be viewed [here](https://github.com/coxner/algorithms/blob/master/heapsort/max_heap.py) and the implementation of it in a program can be viewed [here](https://github.com/coxner/algorithms/blob/master/heapsort/script.py)
 
+## Graphs
+
+In our code found [here](https://github.com/coxner/algorithms/blob/master/graphs/vertex.py) we can see the vertex class and [here](https://github.com/coxner/algorithms/blob/master/graphs/graph.py) we can see the graph class.
+
+###### Vertex
+  - Uses a dictionary as a list to store connected verticies and stores some data
+  - Connected vertex names are the keys and the edge weights are the values
+  - Has methods to add edges and return a list of connected verticies
+
+###### Graph
+  - Can be created as a directed graph where edges are set in one direction
+  - Stores every vertex in a dictionary 
+  - Vertex data is the key and vertex instance is the value
+  - Methods to add verticies, edges between verticies and determine if a path exist between two verticies
+
+###### Graph Search
+
+Graph search algorithms traverse a full graph data structure to find the value of a vertex. Two approaches same as when we used trees. 
+  - depth-first search: known as DFS follows each possible path to its end. Checks all the values along a path before moving to another path. No ideal for finding the fastest path but finding out if a path exist. 
+  - breadth-first search: known as BFS broadens its search from the point of origin to an ever-expanding circle of neighboring vertices. Checks values of all neighboring verticies before moving to another depth level. Very inneficent way to a path between two points but great way to identify the shortest path between two verticies. Does not use a stack data structure but a queue data structure to keep track of current vertex and unvisted vertex neighbors. Search vertex is dequed when all neighboring verticies have been visited. 
+ 
+Works by adding verticies to a list called visted to prevent us from visiting a vertex multiple times. Important for cycle graphs so you dont end up in a infinite loop. Done through using a stack data structure through recursion.
+
+Big O runtime = O(edges + verticies)
+
+###### Graph Search Traversal Order
+
+Depth first is good at organizing verticies (vertex values) with a visitation order of beginning to end. 
+
+Traversal orders
+  - Preorder: Each vertex added to the output list and then add to output list BEFORE they are added to the stack
+  - Postorder: Each vertex is added to the visited list and added to the output list AFTER it is popped off the stack
+  - Reverse Post-Order (Topological Sort): Returns an output list that is exactly the reverse order of the post list 
+
+## Greedy Algorithms 
+
+An algorithm used in optimization problems which aim to find the optimal solution (either max or min) among feasible solutions. Example two locations on a map would find the minimum distance. Works by taking the locally optimal choice at each stage. Only consider the choice that seems best at the moment does not always produce a optimal solution. Makes decisions on best choice at the time. 
+
+Two rules that must be satisfied to use a greedy algorithm.
+  - Optimal substructure property: the optimal solution for the problem contains optimal solutions to the sub-problems.
+  - Greedy property: the global optimal solution can be reached by making locally optimal choices.
+ 
+ 
+
 
