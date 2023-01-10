@@ -7,6 +7,12 @@
   - [Quicksort](#quicksort)
 - [Files](#Files)
 
+## Sliding Window
+Done with two pointers creating a subarray within an array. Idea is sliding window finds best subarray to meet a constraint. 
+
+- Define a pointer for the left and right bound that represents the current window, usually both of them starting at 0
+- Iterate over the array with the right bound to "add" elements to the window.
+- Whenever the constraint is broken, in this example if the sum of the window exceeds k, then "remove" elements from the window by incrementing the left bound until the condition is satisfied again.
 
 ## Pattern Searching
 
